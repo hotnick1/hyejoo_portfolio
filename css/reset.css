@@ -1,0 +1,17 @@
+* { margin: 0; padding: 0; }
+ul,ol,li {list-style: none;}
+a { text-decoration: none; outline: 1;/* <-웹접근성 맞춰야할때 1해야함 */ color: #777; }
+img,fieldset {border: 0;}
+table,th,td { border-collapse: collapse; /* 셀간의 간격을 하나로 합치는것 */ }
+input,select,textarea,form,img,label { vertical-align: middle;/* <-인라인요소들의 세로정렬을 가운데기준으로  */
+     box-sizing: border-box;
+}
+textarea { resize: none; }
+.hidden { position: absolute; top: -99999px; opacity: 0; }
+
+/* float 해제 디폴트 */
+.wrap::after {content:''; display: block; clear: both;}
+.inner::after {content:''; display: block; clear: both;}
+.article::after {content:''; display: block; clear: both;}
+article:nth-last-of-type(1) {margin-right: 0!important;}
+

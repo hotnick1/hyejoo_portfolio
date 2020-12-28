@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>최혜주-포트폴리오 코딩</title>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/111.js"></script>
+    
+    <script src="https://kit.fontawesome.com/32ec8935c7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+    <link rel="stylesheet" type="text/css" href="plugin/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="plugin/slick/slick-theme.css"/>
+    <script>
+        $(function(){
+           $("nav > ul > li").hover(
+              function(){
+                 $(this).parent().parent().stop().animate({height:202}, 400);
+                 $(this).parents("nav").next(".sub_shadow").stop().animate({height:162}, 400);
+              },
+              function(){
+                 $(this).parent().parent().stop().animate({height:40}, 400);
+                 $(this).parents("nav").next(".sub_shadow").stop().animate({height:0}, 400);
+              }
+           );
+           $("nav > ul > li").focusin(function(){
+              $(this).find("li").addClass("active");
+              $(this).parent().parent().stop().animate({height:202}, 400);
+              $(this).parents("nav").next(".sub_shadow").stop().animate({height:162}, 400);
+           });
+           $("nav > ul > li").focusout(function(){
+              $(this).find("li").removeClass("active");
+              $(this).parent().parent().stop().animate({height:40}, 400);
+              $(this).parents("nav").next(".sub_shadow").stop().animate({height:0}, 400);
+           });
+
+           // slider
+           $('.post-wrapper').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                nextArrow:$('.next'),
+                prevArrow:$('.prev'),
+            });
+
+            // tab image
+            var tabImgUrl = ['img/tabimg1.png', 'img/tabimg2.png', 'img/tabimg3.png'];
+            var count = 0;
+            $('#changeImg').attr('src', 'img/tabimg1.png');
+            setInterval(function() {
+                $('#changeImg').attr('src', tabImgUrl[count]);
+                count++;
+                if(count == 3){
+                    count = 0;
+                }
+            }, 2000);
+
+        });
+        </script>
+
+</head>
+<body>
+    
+ 
+    <!-- header -->
+    <header id="header">
+        <div class="inner">
+            <h1><a href="#"><img src="img/logo3.png" alt="logo"></a></h1>
+            <nav>
+                <ul>
+                   <li>
+                      <a href="#">1DEPTH</a>
+                      <ul>
+                         <li><a href="#">2depth</a></li>
+                         <li><a href="#">2depth</a></li>
+                         <li><a href="#">2depth</a></li>
+                         <li><a href="#">2depth</a></li>
+                      </ul>
+                   </li>
+                   <li>
+                      <a href="#">1DEPTH</a>
+                      <ul>
+                         <li><a href="#">2depth</a></li>
+                         <li><a href="#">2depth</a></li>
+                         <li><a href="#">2depth</a></li>
+                         <li><a href="#">2depth</a></li>
+                      </ul>
+                   </li>
+                   <li>
+                      <a href="#">1DEPTH</a>
+                      <ul>
+                         <li><a href="#">2depth</a></li>
+                         <li><a href="#">2depth</a></li>
+                         <li><a href="#">2depth</a></li>
+                         <li><a href="#">2depth</a></li>
+                      </ul>
+                   </li>
+                   <li>
+                      <a href="#">1DEPTH</a>
+                      <ul>
+                         <li><a href="#">2depth</a></li>
+                         <li><a href="#">2depth</a></li>
+                         <li><a href="#">2depth</a></li>
+                         <li><a href="#">2depth</a></li>
+                      </ul>
+                   </li>
+                   <li>
+                      <a href="#">1DEPTH</a>
+                      <ul>
+                         <li><a href="#">2depth</a></li>
+                         <li><a href="#">2depth</a></li>
+                         <li><a href="#">2depth</a></li>
+                         <li><a href="#">2depth</a></li>
+                      </ul>
+                   </li>
+                   <li>
+                      <a href="#">1DEPTH</a>
+                      <ul>
+                         <li><a href="#">2depth</a></li>
+                         <li><a href="#">2depth</a></li>
+                         <li><a href="#">2depth</a></li>
+                         <li><a href="#">2depth</a></li>
+                      </ul>
+                   </li>
+                </ul>
+             </nav>
+             <div class="sub_shadow"></div>
+
+            
+        </div>
+    </header>
+        
+               
+    
+
+    <!-- visual -->
+    <figure id="visual">
+                
+        <div class="inner">
+            <div class="absolute-wrapper">
+                <div class="colored-backgrounds">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                </div>
+            </div>
+            <main>
+                <div class="content">
+                <div class="heading">
+                    <h1>Portrait Love</h1>
+                    <p>
+                    A portrait is a painting, photograph,<br />
+                    sculpture, or other artistic representation<br />
+                    of a person, in which the face and its<br />
+                    expression is predominant.
+                    </p>
+                    <button type="button">View Portraits</button>
+                </div>
+                </div>
+                <div class="wrapper">
+                <div class="images">
+                    <div class="image"></div>
+                    <div class="image"></div>
+                    <div class="image"></div>
+                    <div class="image"></div>
+                </div>
+                </div>
+                <div class="navigation">
+                <div class="right">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-right" width="26" height="26" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" />
+                    <polyline points="9 6 15 12 9 18" />
+                    </svg>
+                </div>
+                <div class="left">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-left" width="26" height="26" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" />
+                    <polyline points="15 6 9 12 15 18" />
+                    </svg>
+                </div>
+                </div>
+            </main>
+        </div>
+    </figure>
+
+
+
+  
+    <!-- tab -->
+    <section id="tab">
+		<div class="inner">
+            <h1>Lorem ipsum dolor sit amet.</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius expedita repellendus <br>quae blanditiis! Placeat expedita beatae vero distinctio quo esse.</p>
+			<div class="wrap">
+				
+				<div class="contentBox">
+					<article>
+                        <a onclick="document.getElementById('changeImg').src = 'img/tabimg1.png'"><i class="fas fa-camera"></i></a>
+						<h2>Lorem, ipsum.</h2>
+						<p>Here comes content description in detail.Here comes content description in detail.</p>
+					</article>
+					<article>
+                        <a onclick="document.getElementById('changeImg').src = 'img/tabimg2.png'"><i class="fas fa-camera"></i></a>
+                        <h2>Lorem, ipsum.</h2>
+						<p>Here comes content description in detail.Here comes content description in detail.</p>
+					</article>
+					<article>
+                        <a onclick="document.getElementById('changeImg').src = 'img/tabimg3.png'"><i class="fas fa-camera"></i></a>
+                        <h2>Lorem, ipsum.</h2>
+						<p>Here comes content description in detail.Here comes content description in detail.</p>
+                    </article>
+                   
+                </div>
+                <div class="picBox"><img src="img/tab5.png" alt="모니터" id="changeImg"></div>
+            </div>
+          
+            
+		</div>
+    </section>
+    
+    <!-- skew_bg -->
+    <section id="skew_bg">
+        <div class="inner">
+            <div class="pic"><img src="img/hydrangea.png" alt="꽃다발"></div>
+            <div class="right">
+                <h1>Lorem, ipsum dolor <br>sit amet consectetur adipisicing.</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, sequi. Accusantium!<br>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <a href="#">VIEW MORE</a>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- mall -->
+    <section id="mall">
+        <div class="inner">
+            <div class="wrap">
+                <article>
+                    <h1>Lorem, ipsum.</h1>
+                    <P>Lorem<br><em>IPSUM DOLOR</em><br>SIT AMET</P>
+                    <div class="pic"></div>
+                </article>
+                <article>
+                    <h1>Lorem, ipsum.</h1>
+                    <P><em>LOREM</em><br>IPSUM<br><em>DOLOR</em><br>SIT<br><em>AMET</em></P>
+                    <div class="pic"></div>
+                </article>
+                <article>
+                    <h1>Lorem, ipsum.</h1>
+                    <P>Lorem<br><em>IPSUM DOLOR</em><br>SIT AMET</P>
+                    <div class="pic"></div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- icon -->
+    <section id="icon">
+        <div class="inner">
+            <h1>Lorem, ipsum dolor.</h1>
+
+            <div class="wrap">
+                <article>
+                    <div class="pic">
+                        <i class="fas fa-address-card"></i>
+                        <p>icon</p>
+                    </div>
+                </article>
+                <article>
+                    <div class="pic">
+                        <i class="fas fa-bus"></i>
+                        <p>icon</p>
+                    </div>
+                </article>
+                <article>
+                    <div class="pic">
+                        <i class="fas fa-calendar-alt"></i>
+                        <p>icon</p>
+                    </div>
+                </article>
+                <article>
+                    <div class="pic">
+                        <i class="fas fa-cloud"></i>
+                        <p>icon</p>
+                    </div>
+                </article>
+                <article>
+                    <div class="pic">
+                        <i class="fas fa-chart-bar"></i>
+                        <p>icon</p>
+                    </div>
+                </article>
+                <article>
+                    <div class="pic">
+                        <i class="fas fa-comments"></i>
+                        <p>icon</p>
+                    </div>
+                </article>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- banner -->
+    <section id="banner">
+        <div class="page-wrapper" style="position:relative;padding:100px 0 100px;">
+            <!--page slider -->
+            <div class="post-slider">
+                <i class="fas fa-chevron-left prev"></i>
+                <i class="fas fa-chevron-right next"></i>
+                <div class="post-wrapper">
+                    <div class="post">
+                        <img src="img/banner1.jpg" class="slider-image"  alt="배너1">
+
+                    </div>
+                    <div class="post">
+                        <img src="img/banner2.jpg" class="slider-image"  alt="배너2">
+
+                    </div>
+                    <div class="post">
+                        <img src="img/banner3.jpg" class="slider-image"  alt="배너3">
+                        
+                    </div>
+                    <div class="post">
+                        <img src="img/banner4.jpg" class="slider-image"  alt="배너4">
+
+                    </div>
+                </div>
+            </div>
+            <!--post slider-->
+        </div>
+    </section>
+
+
+    <!-- brand -->
+    <section id="brand">
+        <div class="inner">
+            <h1>BRAND</h1>
+            <p>
+                <a href="#">더보기<i class="fas fa-plus-circle"></i></a>
+            </p>
+            
+            <div class="wrap">
+                <article>
+                    <h2>정직한</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, facere dolorem.</p>
+                </article>
+                <article>
+                    <h2>현명한</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, facere dolorem.</p>
+                </article>
+                <article>
+                    <h2>특별한</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, facere dolorem.</p>
+                </article>
+                <article>
+                    <h2>편리한</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, facere dolorem.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer id="footer">
+        <div class="inner">
+            <div class="fl">
+                <ul>
+                    <li><a href="">이용약관</a></li>
+                    <li><a href="">개인정보취급방침</a></li>
+                    <li><a href="">매장안내</a></li>
+                    <li><a href="">고객센터</a></li>
+                </ul>
+
+                <p>
+                    (주)포트폴리오 / 대표이사 : 최혜주 / 경기도 수원시 권선구 경수대로 169번길 8-5<br />
+                    대표메일주소 : 6547123@naver.com / TEL : 010-9401-5955<br />
+                    사업자등록번호 : 123-45-67890
+                </p>
+                <div class="copyRight">Copyright ⓒ 2020 CHOI HYE JOO. All right reserved.</div>
+            </div>
+            <div class="fr">
+                <div class="customer">
+                    <P><em>고객센터 010-9401-5955</em></P>
+                    <P>월-금 : 오전 10시 ~ 오후 5시 (휴게시간 12:30 ~ 2:00)<br />토,일,공휴일 휴무</P>
+                </div>
+                <ul class="sns">
+                    <li><a href=""><i class="fab fa-facebook-square"></i></a></li>
+                    <li><a href=""><i class="fab fa-youtube"></i></a></li>
+                    <li><a href=""><i class="fab fa-twitter"></i></a></li>
+
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="plugin/slick/slick.min.js"></script>
+</body>
+</html>
